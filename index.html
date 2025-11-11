@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Placement Portal</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Font Awesome CDN for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav
+      class="bg-gradient-to-r from-blue-800 to-blue-500 text-white shadow-md"
+    >
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="index.html" class="text-2xl font-bold">Placement Portal</a>
+        <ul class="hidden md:flex space-x-6 text-lg">
+          <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+          <li>
+            <a href="companies.html" class="hover:text-yellow-400">Companies</a>
+          </li>
+          <li>
+            <a href="register.html" class="hover:text-yellow-400">Register</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+          </li>
+        </ul>
+        <div class="md:hidden">
+          <button id="menu-btn">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-blue-700">
+        <ul class="flex flex-col p-4 space-y-2 text-lg">
+          <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+          <li>
+            <a href="companies.html" class="hover:text-yellow-400">Companies</a>
+          </li>
+          <li>
+            <a href="register.html" class="hover:text-yellow-400">Register</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+    </script>
+
+    <!-- Hero Section -->
+    <section
+      class="banner relative bg-cover bg-center h-[600px] bg-[url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d')]"
+
+    >
+      <div
+        class="absolute inset-0 bg-black/40 bg-opacity-50 flex flex-col justify-center items-center text-center text-white px-4"
+      >
+        <h1 class="text-5xl font-bold mb-4">Your Career Starts Here</h1>
+        <p class="text-xl mb-6">
+          Connecting students with top companies for better opportunities
+        </p>
+        <a
+          href="register.html"
+          class="bg-yellow-400 text-blue-900 font-bold px-6 py-3 rounded hover:bg-yellow-300 transition"
+          >Register Now</a
+        >
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      class="container mx-auto py-16 px-4 md:flex md:items-center md:gap-12"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"
+        alt="Placement Cell"
+        class="md:w-1/2 rounded shadow-lg mb-6 md:mb-0"
+      />
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">About Our Placement Cell</h2>
+        <p class="text-gray-700 mb-4">
+          Our college placement cell aims to bridge the gap between students and
+          top recruiters. We provide guidance, mentorship, and career
+          opportunities to all students across departments.
+        </p>
+        <p class="text-gray-700">
+          Join our portal to stay updated with upcoming drives, internship
+          opportunities, and workshops conducted by leading companies.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="bg-gray-100 py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Our Placement Services
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <i class="fas fa-briefcase text-5xl text-blue-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Job Opportunities</h3>
+            <p class="text-gray-600">
+              We provide access to top companies visiting campus for placements
+              and internships.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <i
+              class="fas fa-chalkboard-teacher text-5xl text-green-500 mb-4"
+            ></i>
+            <h3 class="text-xl font-bold mb-2">Skill Workshops</h3>
+            <p class="text-gray-600">
+              Regular workshops to enhance coding, communication, and
+              professional skills.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <i class="fas fa-file-alt text-5xl text-yellow-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Resume & CV Guidance</h3>
+            <p class="text-gray-600">
+              Expert advice and templates to build impressive resumes and CVs.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <i class="fas fa-users text-5xl text-purple-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Mock Interviews</h3>
+            <p class="text-gray-600">
+              Simulated interviews with feedback to help students perform
+              confidently.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <i class="fas fa-lightbulb text-5xl text-red-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Career Counseling</h3>
+            <p class="text-gray-600">
+              One-on-one guidance to choose the right career path based on
+              student strengths.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition text-center"
+          >
+            <i class="fas fa-network-wired text-5xl text-indigo-500 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Networking Events</h3>
+            <p class="text-gray-600">
+              Connect with alumni and industry professionals for mentorship and
+              opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Companies Swiper -->
+    <section class="container mx-auto py-16 px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Featured Companies</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Existing companies -->
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+              class="mx-auto h-16 mb-4"
+              alt="Google"
+            />
+            <h3 class="font-bold text-xl mb-2">Google</h3>
+            <p>Software Engineer | Eligibility: CSE, IT</p>
+          </div>
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+              class="mx-auto h-16 mb-4"
+              alt="Microsoft"
+            />
+            <h3 class="font-bold text-xl mb-2">Microsoft</h3>
+            <p>Data Analyst | Eligibility: CSE, ECE</p>
+          </div>
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg"
+              class="mx-auto h-16 mb-4"
+              alt="Infosys"
+            />
+            <h3 class="font-bold text-xl mb-2">Infosys</h3>
+            <p>Software Developer | Eligibility: All Branches</p>
+          </div>
+          <!-- New companies -->
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Amazon_logo.jpg"
+              class="mx-auto h-16 mb-4"
+              alt="Amazon"
+            />
+            <h3 class="font-bold text-xl mb-2">Amazon</h3>
+            <p>Software Engineer | Eligibility: CSE, IT</p>
+          </div>
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/06/Facebook.svg"
+              class="mx-auto h-16 mb-4"
+              alt="Facebook"
+            />
+            <h3 class="font-bold text-xl mb-2">Facebook</h3>
+            <p>Data Scientist | Eligibility: CSE, ECE</p>
+          </div>
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fc/IBM_logo_in.jpg"
+              class="mx-auto h-16 mb-4"
+              alt="IBM"
+            />
+            <h3 class="font-bold text-xl mb-2">IBM</h3>
+            <p>Software Architect | Eligibility: All Branches</p>
+          </div>
+          <!-- Add more swiper-slide elements for additional companies -->
+        </div>
+        <div class="mt-9">
+          <div class="swiper-pagination mt-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
+
+    <!-- Upcoming Drives -->
+    <section class="container mx-auto py-16 px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">
+        Upcoming Placement Drives
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-xl mb-2">Amazon</h3>
+          <p>Date: 10 Nov 2025</p>
+          <p>Eligibility: CSE, IT</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-xl mb-2">TCS</h3>
+          <p>Date: 15 Nov 2025</p>
+          <p>Eligibility: All Branches</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-xl mb-2">Adobe</h3>
+          <p>Date: 20 Nov 2025</p>
+          <p>Eligibility: CSE, ECE</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section
+      class="bg-gradient-to-r from-blue-500 to-blue-300 py-16 text-white"
+    >
+      <h2 class="text-3xl font-bold text-center mb-8">Student Testimonials</h2>
+      <div class="container mx-auto grid md:grid-cols-3 gap-6">
+        <div
+          class="bg-white text-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition"
+        >
+          <p>"This portal helped me secure my dream job at Google!"</p>
+          <p class="mt-4 font-bold">- Alice</p>
+        </div>
+        <div
+          class="bg-white text-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition"
+        >
+          <p>"The interview prep sessions were very helpful."</p>
+          <p class="mt-4 font-bold">- Bob</p>
+        </div>
+        <div
+          class="bg-white text-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition"
+        >
+          <p>"Highly recommend this portal for all students."</p>
+          <p class="mt-4 font-bold">- Carol</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center py-16 bg-yellow-400 text-blue-900">
+      <h2 class="text-3xl font-bold mb-4">Ready to Take the Next Step?</h2>
+      <p class="mb-6">
+        Register now to get updates on placement drives and opportunities.
+      </p>
+      <a
+        href="register.html"
+        class="bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-800 transition"
+        >Register Now</a
+      >
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-6 text-center">
+      &copy; 2025 College Placement Cell | All Rights Reserved
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companies - Placement Portal</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-blue-800 to-blue-500 text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="index.html" class="text-2xl font-bold">Placement Portal</a>
+      <ul class="hidden md:flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="companies.html" class="hover:text-yellow-400">Companies</a></li>
+        <li><a href="register.html" class="hover:text-yellow-400">Register</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+      <div class="md:hidden">
+        <button id="menu-btn">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-700">
+      <ul class="flex flex-col p-4 space-y-2 text-lg">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="companies.html" class="hover:text-yellow-400">Companies</a></li>
+        <li><a href="register.html" class="hover:text-yellow-400">Register</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center h-[400px] bg-[url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')]">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Companies</h1>
+      <p class="text-lg md:text-xl">Explore the companies visiting our campus and apply for opportunities</p>
+    </div>
+  </section>
+
+  <!-- Company Listing -->
+  <section class="container mx-auto py-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Placement Companies</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Company Card -->
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="mx-auto h-16 mb-4" alt="Google">
+        <h3 class="text-xl font-bold mb-2">Google</h3>
+        <p class="text-gray-700 mb-1">Role: Software Engineer</p>
+        <p class="text-gray-700 mb-1">Eligibility: CSE, IT</p>
+        <a href="#" class="inline-block mt-3 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Apply Now</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="mx-auto h-16 mb-4" alt="Microsoft">
+        <h3 class="text-xl font-bold mb-2">Microsoft</h3>
+        <p class="text-gray-700 mb-1">Role: Data Analyst</p>
+        <p class="text-gray-700 mb-1">Eligibility: CSE, ECE</p>
+        <a href="#" class="inline-block mt-3 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Apply Now</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" class="mx-auto h-16 mb-4" alt="Infosys">
+        <h3 class="text-xl font-bold mb-2">Infosys</h3>
+        <p class="text-gray-700 mb-1">Role: Developer</p>
+        <p class="text-gray-700 mb-1">Eligibility: All Branches</p>
+        <a href="#" class="inline-block mt-3 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Apply Now</a>
+      </div>
+    </div>
+
+    <!-- Featured Jobs Swiper -->
+    <div class="mt-16">
+      <h3 class="text-2xl font-bold mb-6 text-center">Featured Jobs & Internships</h3>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <h4 class="font-bold text-xl mb-2">Amazon | SDE Internship</h4>
+            <p>Eligibility: CSE, IT</p>
+          </div>
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <h4 class="font-bold text-xl mb-2">TCS | Trainee</h4>
+            <p>Eligibility: All Branches</p>
+          </div>
+          <div class="swiper-slide bg-white rounded-lg shadow p-6 text-center">
+            <h4 class="font-bold text-xl mb-2">Adobe | Software Intern</h4>
+            <p>Eligibility: CSE, ECE</p>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6 text-center">
+    &copy; 2025 College Placement Cell | All Rights Reserved
+  </footer>
+
+</body>
+</html>
